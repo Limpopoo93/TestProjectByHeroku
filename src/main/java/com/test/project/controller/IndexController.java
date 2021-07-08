@@ -1,13 +1,15 @@
 package com.test.project.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class IndexController {
-    @RequestMapping("/index")
-    public String listAllFunFiction() {
-        return "index";
+    @GetMapping("/index")
+    public ResponseEntity<String> listAllFunFiction() {
+        String text = "hello world rest full";
+        return new ResponseEntity<>(text, HttpStatus.OK);
     }
 }
