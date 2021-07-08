@@ -1,1 +1,1 @@
-web: java -jar target/funFictionUser-0.0.1.jar
+web: java -jar target/TestProjectByHeroku-1.0.jar
